@@ -5,8 +5,24 @@ eleventyNavigation:
 ---
 
 <div class="container">
-    <h1>A blank 11ty project.</h1>
-    {% icon "pins" %}
-    {% logo "hammer" %}
-    {% logo "github", "150", "150" %}
+    <h1>A blank 11ty project - with SVG demo</h1>
+
+    <h2>SVG inheriting CSS classes</h2>
+    <p>A simple shortcode to call an icon which is styled using the project's css. You just need to pass the icon/shape name.</p>
+    {% icon "wheel" %}
+
+    <h2>Default SVG</h2>
+    <p>A logo with 2 additional parameters which define the height and width value which you want to be returned for the shape.</p>
+    {% logo "hammer", "75", "75" %}
+
+    <h2>Logo with color</h2>
+    <p>Added another parameter to fill the shape with a color passed with the parameters.</p>
+    {% colorlogo "wheel", "150", "150", "purple" %}
+
+    <h2>Icon</h2>
+    <p>You can use / call the shapes directly into your template.</p>
+    <svg>
+    <use xlink:href="#icon-github" fill="#dd0000"></use>
+    </svg>
+
 </div>
